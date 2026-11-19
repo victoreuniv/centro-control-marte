@@ -3,34 +3,72 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Centro de Control de Marte</title>
+  <meta name="theme-color" content="#09111f">
+  <meta name="description" content="Centro de control educativo e interactivo para aprender sobre Marte, sus rovers y el diseño responsive con CSS Grid.">
+  <title>Centro de control de Marte | Aprende explorando</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main class="mission-shell">
-    <header class="topbar">
-      <a class="brand" href="#" aria-label="Inicio"><span class="brand-mark">M</span><span><small>Misión</small><strong>Marte</strong></span></a>
-      <div class="status"><span class="status-dot"></span> Sistema operativo</div>
-    </header>
-    <section class="hero" aria-labelledby="mission-title">
-      <div class="hero-copy">
-        <p class="eyebrow">EXPEDICIÓN 2035 · SOL 184</p>
-        <h1 id="mission-title">Centro de control de Marte</h1>
-        <p class="intro">Supervisa las condiciones esenciales de la misión y aprende qué significa cada indicador.</p>
-        <dl class="mission-facts"><div><dt>Ubicación</dt><dd>Cráter Jezero</dd></div><div><dt>Duración</dt><dd>184 soles</dd></div></dl>
-      </div>
-      <div class="planet-panel" aria-label="Representación ilustrativa de Marte"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="planet"><span class="crater crater-a"></span><span class="crater crater-b"></span><span class="crater crater-c"></span></div><div class="planet-label"><span>MARTE</span><small>4.º planeta</small></div></div>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="Centro de control de Marte, inicio"><span class="brand-mark" aria-hidden="true">M</span><span><small>Exploración planetaria</small><strong>MARTE / CONTROL</strong></span></a>
+    <nav aria-label="Navegación principal"><a href="#indicadores">Misión</a><a href="#planeta">El planeta</a><a href="#rovers">Rovers</a><a href="#laboratorio">Laboratorio HCI</a></nav>
+    <span class="live-state"><span aria-hidden="true"></span> SIMULACIÓN EDUCATIVA</span>
+  </header>
+  <main id="contenido">
+    <section class="hero page-width" id="inicio" aria-labelledby="page-title">
+      <div class="hero-copy"><p class="eyebrow"><span class="eyebrow-line"></span> BITÁCORA DE EXPLORACIÓN · SOL 184</p><h1 id="page-title">Un planeta.<br><em>Muchas preguntas.</em></h1><p class="hero-intro">Ponte al mando de una misión simulada y descubre cómo es Marte, qué necesita un rover para trabajar y qué nos cuentan sus instrumentos.</p><a class="primary-link" href="#indicadores">Explorar los indicadores <span aria-hidden="true">↓</span></a><p class="mission-note"><span class="note-icon" aria-hidden="true">i</span> Los valores del panel son ficticios para aprender; los datos científicos se identifican como reales.</p></div>
+      <div class="mars-scene" role="img" aria-label="Ilustración de Marte, con superficie rojiza y una pequeña sonda exploradora"><div class="scene-stars" aria-hidden="true"></div><div class="scene-orbit orbit-a" aria-hidden="true"></div><div class="scene-orbit orbit-b" aria-hidden="true"></div><div class="mars-disc" aria-hidden="true"><i class="landmark landmark-a"></i><i class="landmark landmark-b"></i><i class="landmark landmark-c"></i></div><div class="rover-art" aria-hidden="true"><span class="rover-mast"></span><span class="rover-body"></span><span class="rover-wheel wheel-a"></span><span class="rover-wheel wheel-b"></span><span class="rover-wheel wheel-c"></span></div><span class="scene-coordinate">14° 34′ N &nbsp; 175° 28′ E<br><small>CRÁTER JEZERO · ILUSTRACIÓN</small></span><span class="scene-caption">Una ventana a otro mundo</span></div>
     </section>
-    <section class="dashboard" aria-labelledby="dashboard-title">
-      <div class="section-heading"><div><p class="eyebrow">DATOS DE LA MISIÓN</p><h2 id="dashboard-title">Indicadores actuales</h2></div><p>Actualización: hace 2 minutos</p></div>
-      <div class="indicator-grid">
-        <article class="card"><div class="card-top"><span class="card-icon">O₂</span><span class="trend positive">Óptimo</span></div><h3>Oxígeno</h3><p class="value">92<span>%</span></p><div class="meter oxygen" role="progressbar" aria-label="Nivel de oxígeno" aria-valuemin="0" aria-valuemax="100" aria-valuenow="92"><span></span></div><p class="description"><strong>¿Qué mide?</strong> La reserva disponible para la tripulación. Por encima del 80 % se considera estable.</p></article>
-        <article class="card"><div class="card-top"><span class="card-icon gold">ϟ</span><span class="trend stable">Estable</span></div><h3>Energía</h3><p class="value">78<span>%</span></p><div class="meter energy" role="progressbar" aria-label="Nivel de energía" aria-valuemin="0" aria-valuemax="100" aria-valuenow="78"><span></span></div><p class="description"><strong>¿Qué mide?</strong> La carga acumulada por los paneles solares. Permite alimentar los sistemas durante la noche.</p></article>
-        <article class="card"><div class="card-top"><span class="card-icon mint">°C</span><span class="trend warning">Frío</span></div><h3>Temperatura</h3><p class="value">−63<span>°C</span></p><div class="temperature-scale" aria-label="Temperatura exterior de menos 63 grados Celsius"><span class="temperature-marker"></span></div><p class="description"><strong>¿Qué mide?</strong> La temperatura exterior media. Los trajes espaciales mantienen al equipo protegido.</p></article>
-        <article class="card"><div class="card-top"><span class="card-icon orange">◆</span><span class="trend progress">En curso</span></div><h3>Progreso</h3><p class="value">64<span>%</span></p><div class="meter progress-bar" role="progressbar" aria-label="Progreso de la misión" aria-valuemin="0" aria-valuemax="100" aria-valuenow="64"><span></span></div><p class="description"><strong>¿Qué mide?</strong> El avance respecto a los objetivos planificados. Faltan 107 soles para completar la expedición.</p></article>
+
+    <section class="mission-section page-width" id="indicadores" aria-labelledby="indicators-title">
+      <div class="section-heading"><div><p class="eyebrow">01 / ESTADO DE LA MISIÓN</p><h2 id="indicators-title">¿Todo listo para explorar?</h2></div><p class="section-intro">Lee cada cifra como lo haría un equipo de misión. Abre «¿Qué significa?» para entenderla.</p></div>
+      <p class="simulation-banner"><span aria-hidden="true">✳</span> PANEL DE PRÁCTICA <span>Las cifras siguientes son simuladas, no telemetría real de Marte.</span></p>
+      <div class="indicator-grid" id="mission-grid">
+        <article class="indicator-card oxygen-card"><div class="card-head"><span class="indicator-symbol" aria-hidden="true">O₂</span><span class="state-tag">Reserva estable</span></div><p class="indicator-label">SOPORTE VITAL</p><h3>Oxígeno</h3><p class="reading">92<span>%</span></p><div class="bar" role="progressbar" aria-label="Reserva simulada de oxígeno" aria-valuemin="0" aria-valuemax="100" aria-valuenow="92"><span style="--level:92%"></span></div><p class="card-summary">Reserva disponible para la tripulación.</p><details><summary>¿Qué significa?</summary><p>El oxígeno es necesario para respirar. En una misión tripulada se reciclaría y controlaría dentro de un hábitat presurizado. Este porcentaje es un ejemplo didáctico, no una medición real.</p></details></article>
+        <article class="indicator-card energy-card"><div class="card-head"><span class="indicator-symbol" aria-hidden="true">ϟ</span><span class="state-tag">Nivel suficiente</span></div><p class="indicator-label">SISTEMAS ELÉCTRICOS</p><h3>Energía</h3><p class="reading">78<span>%</span></p><div class="bar" role="progressbar" aria-label="Energía simulada disponible" aria-valuemin="0" aria-valuemax="100" aria-valuenow="78"><span style="--level:78%"></span></div><p class="card-summary">Energía disponible para instrumentos y movimiento.</p><details><summary>¿Qué significa?</summary><p>Un rover necesita electricidad para sus computadoras, cámaras, calefacción y motores. Algunos usan paneles solares; Curiosity y Perseverance usan un generador nuclear de radioisótopos. El porcentaje de este panel es simulado.</p></details></article>
+        <article class="indicator-card temperature-card"><div class="card-head"><span class="indicator-symbol" aria-hidden="true">°C</span><span class="state-tag">Ambiente extremo</span></div><p class="indicator-label">ENTORNO EXTERIOR</p><h3>Temperatura</h3><p class="reading">−65<span>°C</span></p><div class="temperature-track" role="img" aria-label="Escala ilustrativa de temperatura marciana; marcador en una zona muy fría"><span></span></div><p class="card-summary">Temperatura media aproximada de la superficie marciana.</p><details><summary>¿Qué significa?</summary><p>La temperatura media de superficie ronda −65 °C (−85 °F), aunque cambia mucho con la estación, la hora y el lugar. Este es un promedio aproximado, no una lectura actual de Marte.</p></details></article>
+        <article class="indicator-card progress-card"><div class="card-head"><span class="indicator-symbol" aria-hidden="true">↗</span><span class="state-tag">En exploración</span></div><p class="indicator-label">OBJETIVOS CIENTÍFICOS</p><h3>Progreso</h3><p class="reading">64<span>%</span></p><div class="bar" role="progressbar" aria-label="Progreso simulado de la misión" aria-valuemin="0" aria-valuemax="100" aria-valuenow="64"><span style="--level:64%"></span></div><p class="card-summary">Avance ilustrativo de los objetivos de esta misión ficticia.</p><details><summary>¿Qué significa?</summary><p>Las misiones reales tienen metas, fases e instrumentos distintos, no un porcentaje universal. Este 64 % es inventado para practicar la lectura de un panel.</p></details></article>
       </div>
     </section>
-    <footer><p>Centro de control educativo · Datos simulados</p><p>Sol 184 / 291</p></footer>
+
+    <section class="planet-section" id="planeta" aria-labelledby="planet-title"><div class="page-width planet-layout"><div class="planet-copy"><p class="eyebrow">02 / CONOCE EL TERRENO</p><h2 id="planet-title">Marte, en pocas palabras</h2><p class="section-intro">Es nuestro vecino planetario: un mundo rocoso, frío y polvoriento. Su paisaje guarda pistas sobre cómo ha cambiado a lo largo de miles de millones de años.</p><div class="fact-grid"><article class="fact"><span class="fact-number">4.º</span><h3>Desde el Sol</h3><p>Marte es el cuarto planeta desde el Sol y uno de los cuatro planetas rocosos del sistema solar.</p></article><article class="fact"><span class="fact-number">24 h 37 min</span><h3>Un día marciano</h3><p>Un giro de Marte, llamado <em>sol</em>, dura unas 24 horas y 37 minutos terrestres.</p></article><article class="fact"><span class="fact-number">≈ 0,38 g</span><h3>Gravedad menor</h3><p>La gravedad en la superficie equivale a cerca del 38 % de la terrestre.</p></article><article class="fact"><span class="fact-number">≈ 95 %</span><h3>Aire muy tenue</h3><p>La atmósfera es delgada y está compuesta principalmente por dióxido de carbono; no se puede respirar.</p></article></div><p class="source-note">Datos aproximados de referencia: NASA Solar System Exploration, Mars Facts.</p></div><aside class="learn-panel" aria-label="Curiosidad sobre Marte"><span class="learn-kicker">¿SABÍAS QUE…?</span><div class="planet-icon" aria-hidden="true">♂</div><h3>El cielo también cambia</h3><p>El polvo fino suspendido puede dar al cielo marciano tonos rojizos. Al atardecer, cerca del Sol, la luz puede verse azulada por la forma en que el polvo dispersa la luz.</p><span class="fact-source">Curiosidad científica · NASA Mars Exploration</span></aside></div></section>
+
+    <section class="rover-section page-width" id="rovers" aria-labelledby="rovers-title"><div class="section-heading"><div><p class="eyebrow">03 / ROBÓTICA EN OTRO MUNDO</p><h2 id="rovers-title">¿Cómo trabaja un rover?</h2></div><p class="section-intro">Un rover es un laboratorio robótico móvil. Como las señales tardan en viajar entre planetas, debe hacer muchas tareas por sí mismo.</p></div><div class="rover-steps"><article class="step"><span class="step-number">01</span><span class="step-icon" aria-hidden="true">◉</span><h3>Observa</h3><p>Cámaras e instrumentos registran el terreno, las rocas y las condiciones del entorno.</p></article><article class="step"><span class="step-number">02</span><span class="step-icon" aria-hidden="true">⌁</span><h3>Decide con cuidado</h3><p>El equipo en la Tierra planifica; el rover usa sensores y cierta autonomía para evitar peligros cercanos.</p></article><article class="step"><span class="step-number">03</span><span class="step-icon" aria-hidden="true">⌖</span><h3>Investiga</h3><p>Sus herramientas analizan materiales y buscan pistas sobre la historia geológica y el agua antigua.</p></article><article class="step"><span class="step-number">04</span><span class="step-icon" aria-hidden="true">⌁</span><h3>Envía hallazgos</h3><p>Transmite datos a orbitadores marcianos, que pueden retransmitirlos hasta antenas en la Tierra.</p></article></div><details class="deep-dive"><summary>¿Por qué no se conduce el rover como un coche teledirigido?</summary><p>La distancia produce un retraso de comunicación de varios minutos en cada sentido. Por eso el equipo no puede reaccionar al instante: envía instrucciones en tandas, revisa las imágenes recibidas y planifica el siguiente recorrido. El rover también emplea autonomía limitada para detectar obstáculos.</p></details></section>
+
+    <section class="lab-section" id="laboratorio" aria-labelledby="lab-title"><div class="page-width"><div class="section-heading"><div><p class="eyebrow">04 / INTERACCIÓN PERSONA-COMPUTADORA</p><h2 id="lab-title">Laboratorio Responsive</h2></div><p class="section-intro">Redimensiona la ventana del navegador y observa cómo CSS Grid reorganiza las cuatro tarjetas. No hay botones: el diseño responde al ancho real disponible.</p></div>
+      <div class="lab-dashboard" aria-label="Estado responsive actual"><div class="lab-readout"><span class="readout-icon" aria-hidden="true">▦</span><div><span class="readout-label">COLUMNAS DEL GRID</span><output id="column-count" aria-live="polite">Calculando…</output></div></div><div class="lab-readout"><span class="readout-icon" aria-hidden="true">↔</span><div><span class="readout-label">ANCHO DEL VIEWPORT</span><output id="viewport-width" aria-live="polite">Calculando…</output></div></div><p class="lab-hint"><span aria-hidden="true">↔</span> Cambia el ancho de la ventana para ver el laboratorio en acción.</p></div>
+      <div class="lab-content"><article class="lab-explanation"><h3>¿Qué reglas están trabajando?</h3><p>La cuadrícula de misión usa <code>repeat(4, minmax(0, 1fr))</code> en pantallas amplias. Con media queries pasa a dos columnas hasta 900&nbsp;px y a una columna hasta 650&nbsp;px. Las tarjetas ocupan el espacio disponible sin imponer un ancho fijo.</p><pre><code>.indicator-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+@media (max-width: 900px) {
+  .indicator-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 650px) {
+  .indicator-grid { grid-template-columns: 1fr; }
+}</code></pre><p class="lab-note">Las mismas reglas se aplican al panel de arriba: vuelve a «Indicadores» mientras cambias el tamaño para ver la cuadrícula de misión adaptarse.</p></article><article class="hci-explanation"><span class="hci-kicker">HCI · DISEÑO CENTRADO EN LAS PERSONAS</span><h3>¿Por qué importa adaptarse?</h3><ul><li><strong>Contextos diversos:</strong> funciona en teléfono, tableta y escritorio, con distintos tamaños y formas de interacción.</li><li><strong>Experiencia consistente:</strong> el contenido y el orden se mantienen mientras la disposición cambia de forma predecible.</li><li><strong>Menor carga cognitiva:</strong> evita tarjetas estrechas y obliga menos a interpretar o buscar información comprimida.</li><li><strong>Legibilidad y accesibilidad:</strong> los textos conservan espacio suficiente; el contenido sigue el flujo natural y se puede ampliar.</li><li><strong>Diseño centrado en el usuario:</strong> la interfaz se adapta al espacio disponible de la persona, no le exige controlar un modo de vista.</li></ul></article></div>
+      <p class="lab-accessible">La lectura del ancho y el número de columnas se actualiza al cambiar el tamaño de la ventana. También se anuncia mediante una región accesible para tecnologías de asistencia.</p>
+    </div></section>
+    <section class="closing page-width"><span class="callout-symbol" aria-hidden="true">✦</span><p><strong>Explorar también es hacer ciencia.</strong> Cada imagen, muestra y medición ayuda a reconstruir la historia del planeta y a preparar futuras misiones.</p><a href="#inicio">Volver al centro de control ↑</a></section>
   </main>
+  <footer class="site-footer"><div class="page-width"><p>MARTE / CONTROL · Recurso educativo de exploración espacial</p><p>Indicadores simulados · Ciencia divulgativa basada en fuentes de NASA</p></div></footer>
+  <script>
+    (() => {
+      const grid = document.querySelector('#mission-grid');
+      const columnOutput = document.querySelector('#column-count');
+      const widthOutput = document.querySelector('#viewport-width');
+      const update = () => {
+        const columns = getComputedStyle(grid).gridTemplateColumns.split(' ').filter(Boolean).length;
+        columnOutput.value = `${columns} ${columns === 1 ? 'columna' : 'columnas'}`;
+        columnOutput.textContent = columnOutput.value;
+        widthOutput.value = `${document.documentElement.clientWidth} px`;
+        widthOutput.textContent = widthOutput.value;
+      };
+      update();
+      new ResizeObserver(update).observe(grid);
+      window.addEventListener('resize', update, { passive: true });
+    })();
+  </script>
 </body>
 </html>
