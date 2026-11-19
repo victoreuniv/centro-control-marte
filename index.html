@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Centro de Control de Marte</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="mission-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Inicio"><span class="brand-mark">M</span><span><small>Misión</small><strong>Marte</strong></span></a>
+      <div class="status"><span class="status-dot"></span> Sistema operativo</div>
+    </header>
+    <section class="hero" aria-labelledby="mission-title">
+      <div class="hero-copy">
+        <p class="eyebrow">EXPEDICIÓN 2035 · SOL 184</p>
+        <h1 id="mission-title">Centro de control de Marte</h1>
+        <p class="intro">Supervisa las condiciones esenciales de la misión y aprende qué significa cada indicador.</p>
+        <dl class="mission-facts"><div><dt>Ubicación</dt><dd>Cráter Jezero</dd></div><div><dt>Duración</dt><dd>184 soles</dd></div></dl>
+      </div>
+      <div class="planet-panel" aria-label="Representación ilustrativa de Marte"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="planet"><span class="crater crater-a"></span><span class="crater crater-b"></span><span class="crater crater-c"></span></div><div class="planet-label"><span>MARTE</span><small>4.º planeta</small></div></div>
+    </section>
+    <section class="dashboard" aria-labelledby="dashboard-title">
+      <div class="section-heading"><div><p class="eyebrow">DATOS DE LA MISIÓN</p><h2 id="dashboard-title">Indicadores actuales</h2></div><p>Actualización: hace 2 minutos</p></div>
+      <div class="indicator-grid">
+        <article class="card"><div class="card-top"><span class="card-icon">O₂</span><span class="trend positive">Óptimo</span></div><h3>Oxígeno</h3><p class="value">92<span>%</span></p><div class="meter oxygen" role="progressbar" aria-label="Nivel de oxígeno" aria-valuemin="0" aria-valuemax="100" aria-valuenow="92"><span></span></div><p class="description"><strong>¿Qué mide?</strong> La reserva disponible para la tripulación. Por encima del 80 % se considera estable.</p></article>
+        <article class="card"><div class="card-top"><span class="card-icon gold">ϟ</span><span class="trend stable">Estable</span></div><h3>Energía</h3><p class="value">78<span>%</span></p><div class="meter energy" role="progressbar" aria-label="Nivel de energía" aria-valuemin="0" aria-valuemax="100" aria-valuenow="78"><span></span></div><p class="description"><strong>¿Qué mide?</strong> La carga acumulada por los paneles solares. Permite alimentar los sistemas durante la noche.</p></article>
+        <article class="card"><div class="card-top"><span class="card-icon mint">°C</span><span class="trend warning">Frío</span></div><h3>Temperatura</h3><p class="value">−63<span>°C</span></p><div class="temperature-scale" aria-label="Temperatura exterior de menos 63 grados Celsius"><span class="temperature-marker"></span></div><p class="description"><strong>¿Qué mide?</strong> La temperatura exterior media. Los trajes espaciales mantienen al equipo protegido.</p></article>
+        <article class="card"><div class="card-top"><span class="card-icon orange">◆</span><span class="trend progress">En curso</span></div><h3>Progreso</h3><p class="value">64<span>%</span></p><div class="meter progress-bar" role="progressbar" aria-label="Progreso de la misión" aria-valuemin="0" aria-valuemax="100" aria-valuenow="64"><span></span></div><p class="description"><strong>¿Qué mide?</strong> El avance respecto a los objetivos planificados. Faltan 107 soles para completar la expedición.</p></article>
+      </div>
+    </section>
+    <footer><p>Centro de control educativo · Datos simulados</p><p>Sol 184 / 291</p></footer>
+  </main>
+</body>
+</html>
