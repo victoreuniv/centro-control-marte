@@ -1,37 +1,43 @@
 # Centro de control de Marte
 
-Web didáctica e interactiva para explorar una misión simulada a Marte. Combina un panel de control con explicaciones sencillas sobre sus indicadores, información científica básica del planeta y una introducción al trabajo de los rovers.
+Web educativa e interactiva sobre Marte que combina un centro de misión con contenidos sobre el planeta, los rovers y el diseño responsive.
 
-## Qué encontrarás
+## Incluye
 
-- Indicadores de oxígeno, energía, temperatura y progreso, con explicaciones desplegables.
-- Datos introductorios sobre Marte y una curiosidad sobre su cielo.
-- Un recorrido por las etapas de trabajo de un rover y por qué no se conduce en tiempo real desde la Tierra.
-- Diseño adaptable a móvil y escritorio, elaborado con HTML y CSS, sin dependencias ni JavaScript.
-- Los indicadores de la misión están identificados expresamente como **simulados**. Los datos del planeta son aproximados y divulgativos.
+- Explicaciones desplegables de oxígeno, energía, temperatura y progreso.
+- Datos divulgativos sobre Marte y su exploración robótica.
+- Diferenciación clara entre valores simulados y datos científicos aproximados.
+- **Laboratorio Responsive** con medición en tiempo real del ancho del viewport y número de columnas CSS Grid.
+- Justificación de HCI sobre adaptación, consistencia, carga cognitiva, legibilidad y diseño centrado en el usuario.
 
-## Ver la web
+## Diseño responsive
 
-https://victoreuniv.github.io/centro-control-marte/
+El Grid principal usa `repeat(4, minmax(0, 1fr))`, pasa a dos columnas por debajo de `900px` y a una columna por debajo de `650px`. Las propiedades usan contenedores relativos y unidades como `rem`, `%`, `vw` y `clamp()`.
 
-## Ejecutar localmente
+Al cambiar el tamaño del navegador, el script observa el grid real y actualiza:
 
-Abre `index.html` directamente en un navegador o inicia un servidor local desde la raíz:
+- el número de columnas calculado por el navegador;
+- el ancho actual del viewport;
+- la reorganización visible de las tarjetas.
+
+No utiliza simulaciones ni controles artificiales de tamaño.
+
+## Uso local
 
 ```bash
 python3 -m http.server 8080
 ```
 
-Visita `http://localhost:8080`.
+Abre `http://localhost:8080`.
 
-## Tecnologías y accesibilidad
+## Publicación
 
-HTML5 semántico, CSS Grid, Flexbox, unidades relativas y media queries. Las explicaciones se despliegan con el elemento nativo `<details>`, compatible con teclado y ratón. Se respeta la preferencia del sistema para reducir movimiento.
+https://victoreuniv.github.io/centro-control-marte/
 
-## Fuentes científicas de referencia
+## Referencias científicas
 
-- NASA Solar System Exploration, [Mars Facts](https://science.nasa.gov/mars/facts/).
-- NASA Mars Exploration Program, [Mars Exploration Rovers](https://science.nasa.gov/mission/mars-exploration-rovers-spirit-and-opportunity/) y [Mars 2020: Perseverance](https://science.nasa.gov/mission/mars-2020-perseverance/).
-- NASA, información sobre [la atmósfera de Marte](https://mars.nasa.gov/all-about-mars/facts/).
+- NASA, [Mars Facts](https://science.nasa.gov/mars/facts/).
+- NASA, [Mars 2020 Perseverance](https://science.nasa.gov/mission/mars-2020-perseverance/).
+- NASA, [All About Mars](https://mars.nasa.gov/all-about-mars/facts/).
 
-El panel no presenta telemetría en directo. Los datos de oxígeno, energía y progreso son ficticios para fines educativos; la temperatura mostrada es una referencia redondeada, no una lectura actual de Marte.
+Los porcentajes de oxígeno, energía y progreso son ficticios. La temperatura es una referencia aproximada y no una lectura real actual.
